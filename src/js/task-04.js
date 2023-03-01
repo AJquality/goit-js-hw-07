@@ -11,11 +11,12 @@ function getRandomHexColor() {
 
 function createBoxes(value) {
   let size = 30;
-  for (let i = 1; i <= value; size += 10) {
+  for (let i = 1; i <= value; i += 1) {
     boxes.insertAdjacentHTML(
       "afterbegin",
-      `<div style="width:${size}px;height:${size}px;backgroundColor: ${getRandomHexColor()}"></div>`
+      `<div style="width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}"></div>`
     );
+    size += 10;
   }
 }
 
